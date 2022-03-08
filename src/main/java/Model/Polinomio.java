@@ -120,4 +120,40 @@ public class Polinomio extends ListaDoble{
             }
         }
     }
+
+    public void simplifica() { 
+        int i = 0;
+        NodoDoble current = null, index = null;
+        //Monomio temp = new Monomio(0,i);
+        //Check whether list is empty
+        if(inicio == null) {
+            return;
+        }
+        else {
+            //
+            for(current = inicio; current.siguiente != null; current = current.siguiente) {
+                //Index will point to node next to current
+                for(index = current.siguiente; index != null; index = index.siguiente) {
+                    //If current's data is greater than index's data, swap the data of current and index
+                    Object eliminado = null;
+                    if(current.dato.grado == index.dato.grado) {
+                        int a = current.dato.coeficiente + index.dato.coeficiente;
+                        int b = current.dato.grado;
+                        Monomio n = new Monomio(a,b);
+                        current.dato = n;
+                        current.setSiguiente(index.getSiguiente());
+                        eliminado = index.dato;
+                        //current.setSiguiente(index.getSiguiente());
+                        /*eliminado = index.getDato();
+                        index = index.getAnterior();
+                        index.setSiguiente(current);*/
+                    }
+                }
+                if(current.siguiente == null){
+                    break;
+                }
+            }
+            
+        }
+    }
 }
