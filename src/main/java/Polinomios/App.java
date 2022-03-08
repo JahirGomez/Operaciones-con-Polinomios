@@ -18,10 +18,12 @@ public class App
         a.insertaOrdenado(d);
         a.insertaOrdenado(b);
         a.insertaOrdenado(c);
+        a.sortList();
 
         aux.insertaOrdenado(d);
         aux.insertaOrdenado(b);
         aux.insertaOrdenado(c);
+        aux.sortList();
         
         aux.imprimir();
         System.out.println();
@@ -35,11 +37,13 @@ public class App
         a2.insertaOrdenado(d2);
         a2.insertaOrdenado(b2);
         a2.insertaOrdenado(c2);
+        a2.sortList();
         
         a2.imprimir();
         System.out.println();
         Polinomio nuevo = new Polinomio();
         nuevo = (a.resta(a2));
+        nuevo.sortList();
         nuevo.imprimir();
         System.out.println();
         

@@ -83,5 +83,21 @@ public abstract class Lista{
             actual = actual.getSiguiente();
         }
     }
+
+    public String imprimirS(){
+        Nodo actual = inicio;
+        String format="";
+        while (actual!=null){
+            if(actual.getSiguiente()==null){
+                format+=actual.getDato().toString();
+            actual = actual.getSiguiente();
+            }else{
+                format+=actual.getDato()+"+";
+            actual = actual.getSiguiente();
+            }
+            
+        }
+        return format;
+    }
     
 }
