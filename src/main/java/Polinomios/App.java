@@ -2,6 +2,7 @@ package Polinomios;
 
 import Model.Monomio;
 import Model.Polinomio;
+import View.Inicio;
 
 /**
  * Hello world!
@@ -10,7 +11,7 @@ import Model.Polinomio;
 public class App 
 {
     public static void main( String[] args ){
-        Polinomio a = new Polinomio();
+       /* Polinomio a = new Polinomio();
         Polinomio aux = new Polinomio();
         Monomio b = new Monomio(2, 2);
         Monomio c = new Monomio(4, 4);
@@ -45,7 +46,9 @@ public class App
         nuevo = (a.resta(a2));
         nuevo.sortList();
         nuevo.imprimir();
-        System.out.println();
+        System.out.println();*/
+
+        new Inicio().setVisible(true);
         
     }
 }
